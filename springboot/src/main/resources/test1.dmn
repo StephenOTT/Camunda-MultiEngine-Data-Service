@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0oskw8l" name="myDRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.6.0">
+  <decision id="myDecision" name="myDecision">
+    <informationRequirement id="InformationRequirement_1ve8wds">
+      <requiredDecision href="#SomeOtherDecision" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1lp9zq3">
+      <input id="Input_1" label="myInput">
+        <inputExpression id="InputExpression_1" typeRef="string" expressionLanguage="feel">
+          <text>myInput</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="myOutput" typeRef="string" />
+      <rule id="DecisionRule_1rlt6at">
+        <inputEntry id="UnaryTests_0pa5ena">
+          <text>"someInput"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d9b9j2">
+          <text>"someOutput"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w1b6c3">
+        <inputEntry id="UnaryTests_1miwgld">
+          <text>"someOtherInput"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y2gh8j">
+          <text>"someOtherValue"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="SomeOtherDecision" name="SomeOtherDecision">
+    <decisionTable id="DecisionTable_1iphw66">
+      <input id="InputClause_1lu1rsz" label="In1">
+        <inputExpression id="LiteralExpression_07b2mbw" typeRef="integer">
+          <text>in1</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0eais6d" label="Out1" typeRef="integer" />
+      <rule id="DecisionRule_159d3py">
+        <inputEntry id="UnaryTests_1mfsjh9">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qyq9x3">
+          <text>11</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02dzusd">
+        <inputEntry id="UnaryTests_1ldh4o2">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07d3dog">
+          <text>22</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08dp810">
+        <inputEntry id="UnaryTests_0i8kvrp">
+          <text>3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14lm722">
+          <text>33</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="myDecision">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0rwc0lp" dmnElementRef="InformationRequirement_1ve8wds">
+        <di:waypoint x="240" y="220" />
+        <di:waypoint x="240" y="180" />
+        <di:waypoint x="240" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1ax5kjd" dmnElementRef="SomeOtherDecision">
+        <dc:Bounds height="80" width="180" x="150" y="220" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
