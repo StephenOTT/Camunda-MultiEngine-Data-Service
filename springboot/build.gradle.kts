@@ -44,7 +44,8 @@ dependencies {
 }
 
 application {
-    mainClassName = "com.github.stephenott.camunda.multienginedataservice.springboot.Application"
+    // notice the Kt at the end!!
+    mainClassName = "com.github.stephenott.camunda.multienginedataservice.springboot.ApplicationKt"
 }
 
 tasks {

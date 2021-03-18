@@ -1,5 +1,12 @@
 # Multi-Engine Data Service
 
+WIP release from internal closed source version.
+
+Quick Dev Setup
+
+1. install MongoDb runner with replica set support `npm install run-rs -g` (https://www.npmjs.com/package/run-rs?activeTab=readme)
+1. in terminal run `run-rs -v 4.4.2`
+1. Run the springboot module
 
 # Plugin Configuration
 
